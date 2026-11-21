@@ -1,6 +1,6 @@
 # Kepler Atlas
 
-Interaktive deutschsprachige Visualisierung der Keplerschen Gesetze für ein Erklärungsvideo.
+Interaktive Visualisierung der Keplerschen Gesetze für ein Erklärungsvideo.
 
 ## Inhalte
 
