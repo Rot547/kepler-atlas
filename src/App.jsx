@@ -287,7 +287,9 @@ function App() {
               {thirdMode === 'graph' && <ThirdLawScene planetIndex={planetIndex} />}
               {thirdMode === 'formula' && <OrbitFormulaScene planetIndex={planetIndex} />}
             </div>
-            <aside className="formula-card"><span>{planet}</span><b>T² / a³ = konstant</b><small>Für die Sonne: T² = a³</small></aside>
+            {thirdMode === 'formula' ? null : (
+              <aside className="formula-card"><span>{planet}</span><b>T² / a³ = konstant</b><small>Für die Sonne: T² = a³</small></aside>
+            )}
           </>
         )}
 
