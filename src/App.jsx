@@ -290,13 +290,9 @@ function App() {
             {thirdMode === 'graph' && (
               <aside className="info-card"><span className="card-index">03</span><h2>Die Harmonie der Planetenbahnen</h2><p>Je größer die große Halbachse, desto länger die Umlaufzeit.</p></aside>
             )}
-            {thirdMode === 'derivation' && (
-              <aside className="info-card"><span className="card-index">Herleitung</span><h2>Von Newton zu Kepler</h2><p>Die Kraftgleichung zeigt, warum Umlaufzeit und große Halbachse durch die dritte Potenz verbunden sind.</p></aside>
-            )}
             <div className="visual-stage">
               {thirdMode === 'graph' && <ThirdLawScene planetIndex={planetIndex} />}
               {thirdMode === 'formula' && <OrbitFormulaScene planetIndex={planetIndex} />}
-              {thirdMode === 'derivation' && <NewtonDerivationScene />}
             </div>
             <aside className="formula-card"><span>{planet}</span><b>T² / a³ = konstant</b><small>Für die Sonne: T² = a³</small></aside>
           </>
@@ -316,7 +312,6 @@ function App() {
             <div className="mode-controls">
               <button className={thirdMode === 'graph' ? 'active' : ''} onClick={() => setThirdMode('graph')}>Grafik</button>
               <button className={thirdMode === 'formula' ? 'active' : ''} onClick={() => setThirdMode('formula')}>An der Ellipse</button>
-              <button className={thirdMode === 'derivation' ? 'active' : ''} onClick={() => setThirdMode('derivation')}>Newton-Herleitung</button>
             </div>
             <div className="planet-controls compact-planets">{['Merkur','Venus','Erde','Mars','Jupiter'].map((name,i)=><button key={name} className={planetIndex === i ? 'active' : ''} onClick={() => setPlanetIndex(i)}>{name}</button>)}</div>
           </div>
@@ -424,48 +419,6 @@ function OrbitFormulaScene({ planetIndex }) {
         <rect x="0" y="0" width="300" height="75" rx="12" className="formula-box result" />
         <text x="150" y="30" textAnchor="middle" className="formula-subtitle">{name}</text>
         <text x="150" y="58" textAnchor="middle" className="formula-result">{t2.toFixed(2)} / {r3.toFixed(2)} ≈ 1</text>
-      </g>
-    </svg>
-  )
-}
-
-function NewtonDerivationScene() {
-  return (
-    <svg className="third-scene derivation-scene" viewBox="0 0 1000 740" role="img" aria-label="Herleitung des dritten Keplerschen Gesetzes aus dem Gravitationsgesetz">
-      <text x="500" y="70" textAnchor="middle" className="derivation-title">Herleitung mit dem Newtonschen Gravitationsgesetz</text>
-
-      <g transform="translate(55 120)">
-        <rect x="0" y="0" width="280" height="145" rx="12" className="derivation-box" />
-        <text x="140" y="38" textAnchor="middle" className="derivation-step">1 · Gravitationskraft</text>
-        <text x="140" y="82" textAnchor="middle" className="derivation-formula">F₍G₎ = GMm / r²</text>
-        <text x="140" y="118" textAnchor="middle" className="derivation-note">Sonne: M · Planet: m</text>
-      </g>
-
-      <g transform="translate(360 120)">
-        <rect x="0" y="0" width="280" height="145" rx="12" className="derivation-box" />
-        <text x="140" y="38" textAnchor="middle" className="derivation-step">2 · Zentripetalkraft</text>
-        <text x="140" y="82" textAnchor="middle" className="derivation-formula">F₍Z₎ = mv² / r</text>
-        <text x="140" y="118" textAnchor="middle" className="derivation-note">Für eine Kreisbahn</text>
-      </g>
-
-      <g transform="translate(665 120)">
-        <rect x="0" y="0" width="280" height="145" rx="12" className="derivation-box" />
-        <text x="140" y="38" textAnchor="middle" className="derivation-step">3 · Kräfte gleichsetzen</text>
-        <text x="140" y="82" textAnchor="middle" className="derivation-formula">GMm/r² = mv²/r</text>
-        <text x="140" y="118" textAnchor="middle" className="derivation-note">m kürzt sich heraus</text>
-      </g>
-
-      <g transform="translate(55 330)">
-        <rect x="0" y="0" width="890" height="150" rx="12" className="derivation-box derivation-main" />
-        <text x="445" y="35" textAnchor="middle" className="derivation-step">4 · Umlaufgeschwindigkeit einsetzen</text>
-        <text x="445" y="78" textAnchor="middle" className="derivation-formula">v = 2πr/T  →  GM/r² = 4π²r/T²</text>
-        <text x="445" y="118" textAnchor="middle" className="derivation-formula derivation-result">T² = 4π²r³/(GM)</text>
-      </g>
-
-      <g transform="translate(55 545)">
-        <rect x="0" y="0" width="890" height="115" rx="12" className="derivation-box derivation-result-box" />
-        <text x="445" y="40" textAnchor="middle" className="derivation-step">Für elliptische Bahnen: r → große Halbachse a</text>
-        <text x="445" y="82" textAnchor="middle" className="derivation-formula derivation-result">T²/a³ = 4π²/(GM) = konstant</text>
       </g>
     </svg>
   )
