@@ -282,14 +282,14 @@ function App() {
         )}
         {law === 4 && (
           <>
-            <aside className="info-card"><span className="card-index">03</span><h2>{thirdMode === 'graph' ? 'Die Harmonie der Planetenbahnen' : 'Die Bestandteile der Formel an der Ellipse'}</h2><p>{thirdMode === 'graph' ? 'Je größer die große Halbachse, desto länger die Umlaufzeit.' : 'Die Umlaufzeit T gehört zur Bewegung auf der Bahn. Die große Halbachse a bestimmt die Bahngröße.'}</p></aside>
+            {thirdMode === 'graph' && (
+              <aside className="info-card"><span className="card-index">03</span><h2>Die Harmonie der Planetenbahnen</h2><p>Je größer die große Halbachse, desto länger die Umlaufzeit.</p></aside>
+            )}
             <div className="visual-stage">
               {thirdMode === 'graph' && <ThirdLawScene planetIndex={planetIndex} />}
               {thirdMode === 'formula' && <OrbitFormulaScene planetIndex={planetIndex} />}
             </div>
-            {thirdMode === 'formula' ? null : (
-              <aside className="formula-card"><span>{planet}</span><b>T² / a³ = konstant</b><small>Für die Sonne: T² = a³</small></aside>
-            )}
+            <aside className="formula-card"><span>{planet}</span><b>T² / a³ = konstant</b><small>Für die Sonne: T² = a³</small></aside>
           </>
         )}
 
