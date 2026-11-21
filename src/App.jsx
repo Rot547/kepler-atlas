@@ -43,7 +43,7 @@ function EllipseScene({ eccentricity, playing, phase, layers }) {
         <text x={periX-48} y={cy-18} className="point-label perihel-label">Perihel</text>
         <text x={aphelX-30} y={cy-18} className="point-label aphel-label">Aphel</text>
       </>}
-      {playing && layers.distances && <g className="motion-dots"><circle cx={px+20} cy={py-8} r="3" /><circle cx={px+34} cy={py-14} r="2" /></g>}
+      {playing && layers.distances && <g className="motion-dots" />}
     </svg>
   )
 }
@@ -248,7 +248,7 @@ function App() {
             <button key={label} className={law === index ? 'active' : ''} onClick={() => setLaw(index)}>{label}</button>
           ))}
         </nav>
-        <button className="record-button" onClick={toggleFullscreen} title="Vollbild umschalten"><span className="camera-icon">◉</span> Aufnahme-Modus <span className="expand-icon">↗</span></button>
+        <button className="record-button" onClick={toggleFullscreen} title="Vollbild umschalten"><span className="camera-icon">◉</span> Vollbild <span className="expand-icon">↗</span></button>
       </header>
 
       <section className="stage">
@@ -396,9 +396,7 @@ function OrbitFormulaScene({ planetIndex }) {
       <circle cx={planetX} cy={cy} r="9" className="planet-dot" />
       <line x1={cx} y1={cy} x2={planetX} y2={cy} className="axis-line formula-axis" />
       <text x={cx+a/2} y={cy-18} className="formula-a-label">a · große Halbachse</text>
-      <path d={`M ${cx-a} ${cy+22} A ${a} ${b} 0 1 1 ${cx+a} ${cy+22}`} className="formula-time-arc" />
-      <polygon points={`${cx+a-12},${cy+9} ${cx+a},${cy+22} ${cx+a-13},${cy+25}`} className="formula-time-arrow" />
-      <text x={cx} y={cy-b-28} textAnchor="middle" className="formula-t-label">T · Umlaufzeit für einen Umlauf</text>
+      <text x={cx} y="205" textAnchor="middle" className="formula-t-label">T · Umlaufzeit für einen Umlauf</text>
       <g transform="translate(80 35)">
         <rect x="0" y="0" width="250" height="110" rx="12" className="formula-box numerator" />
         <text x="125" y="42" textAnchor="middle" className="formula-symbol">T²</text>
