@@ -536,416 +536,62 @@
   font-size: 0.82rem;
 }
 
-.derivation p {
-  font-family: Georgia, serif;
-  color: #dbe7f7;
-  font-size: 1.05rem;
-}
-
-.planet-result {
-  margin-top: 38px;
-  border-top: 1px solid rgba(147, 174, 210, 0.18);
-  border-bottom: 1px solid rgba(147, 174, 210, 0.18);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  padding: 22px 0;
-}
-
-.planet-result>span {
-  text-transform: uppercase;
-  color: #7f91a8;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-}
-
-.planet-result>strong {
-  font-family: Georgia, serif;
-  font-size: 2rem;
-  color: #efb152;
-}
-
-.planet-result div {
-  display: flex;
-  justify-content: flex-end;
-  gap: 30px;
-}
-
-.planet-result b {
-  font-size: 0.78rem;
-}
-
-.application-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid rgba(147, 174, 210, 0.16);
-  border-left: 1px solid rgba(147, 174, 210, 0.16);
-}
-
-.application-grid article {
-  min-height: 300px;
-  padding: 38px;
-  border-right: 1px solid rgba(147, 174, 210, 0.16);
-  border-bottom: 1px solid rgba(147, 174, 210, 0.16);
-}
-
-.app-number {
-  color: #efb152;
-  font-family: Georgia, serif;
-}
-
-.application-grid h3 {
-  font-family: Georgia, serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin: 80px 0 18px;
-}
-
-.application-grid p {
-  color: #91a3ba;
-  line-height: 1.75;
-}
-
-.mini-formula {
-  font-family: Georgia, serif;
-  color: #efb152;
-  margin-top: 22px;
-  border-top: 1px solid rgba(147, 174, 210, 0.12);
-  padding-top: 16px;
-}
-
-footer {
-  height: 120px;
-  padding: 0 5.5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid rgba(147, 174, 210, 0.12);
-  color: #71839d;
-}
-
-footer span {
-  color: #dbe7f7;
+.derivation-title {
+  fill: #edf4ff;
+  font-size: 22px;
   font-weight: 700;
 }
 
-/* Presentation layout */
-.presentation {
-  height: 100vh;
-  min-height: 650px;
-  background: #0b1220;
-  color: #edf4ff;
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: 74px minmax(0, 1fr) 145px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.law-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 26px;
-  border-bottom: 1px solid rgba(120, 150, 190, 0.18);
-  background: rgba(12, 23, 43, 0.98);
-  z-index: 5;
-}
-
-.law-tabs {
-  display: flex;
-  gap: 6px;
-}
-
-.law-tabs button {
-  height: 38px;
-  padding: 0 18px;
-  border: 1px solid #536b92;
-  border-radius: 8px;
-  background: #111e34;
-  color: #edf4ff;
-  font-weight: 700;
-  font-size: 15px;
-}
-
-.law-tabs button.active {
-  background: #466bff;
-  border-color: #587aff;
-}
-
-.record-button {
-  height: 38px;
-  padding: 0 12px;
-  border: 1px solid #536b92;
-  border-radius: 8px;
-  background: #111d30;
-  color: #edf4ff;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.camera-icon {
-  color: #aebed4;
-}
-
-.expand-icon {
-  margin-left: 4px;
-  font-size: 18px;
-}
-
-.stage {
-  position: relative;
-  min-height: 0;
-  border-bottom: 1px solid rgba(120, 150, 190, 0.18);
-  background: radial-gradient(circle at 52% 48%, rgba(45, 93, 159, 0.16), transparent 34%), #09101d;
-}
-
-.visual-stage {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: min(70vw, 980px);
-  height: calc(100% - 5px);
-  transform: translate(-50%, -50%);
-}
-
-.ellipse-scene,
-.third-scene {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.orbit-line {
-  fill: none;
-  stroke: #edf4ff;
+.derivation-box {
+  fill: rgba(25, 39, 70, 0.96);
+  stroke: #60739c;
   stroke-width: 2;
 }
 
-.orbit-inner {
-  fill: none;
-  stroke: #6d829e;
-  stroke-width: 0.6;
-  opacity: 0.12;
-}
-
-.axis-line {
-  stroke: #8fa1ba;
-  stroke-width: 1;
-  stroke-dasharray: 7 8;
-  opacity: 0.32;
-}
-
-.radius-line {
+.derivation-main {
   stroke: #efb152;
-  stroke-width: 2;
-  opacity: 0.8;
 }
 
-.area {
-  stroke: #efb152;
-  stroke-width: 1;
+.derivation-result-box {
+  stroke: #64d69a;
 }
 
-.area-a {
-  fill: rgba(239, 177, 82, 0.43);
-}
-
-.area-b {
-  fill: rgba(239, 177, 82, 0.27);
-}
-
-.sun-halo {
-  filter: drop-shadow(0 0 12px #efb152);
-}
-
-.sun-core {
-  fill: #ffc55a;
-  stroke: #ffdc7d;
-  stroke-width: 2;
-}
-
-.planet-dot {
-  fill: #52ad73;
-  stroke: #91dab0;
-  stroke-width: 2;
-}
-
-.planet-halo {
-  fill: none;
-  stroke: #52ad73;
-  stroke-width: 1;
-  opacity: 0.18;
-}
-
-.area-label,
-.point-label,
-.sun-label,
-.formula-label,
-.axis-label {
+.derivation-step {
   fill: #efb152;
-  font-size: 14px;
-}
-
-.sun-label {
-  fill: #dbe7f7;
-  font-size: 11px;
-}
-
-.point-label {
-  font-size: 12px;
-}
-
-.formula-label {
-  font-size: 16px;
-}
-
-.motion-dots circle {
-  fill: #8bd5a5;
-}
-
-.info-card {
-  position: absolute;
-  z-index: 3;
-  left: 24px;
-  top: 24px;
-  width: 320px;
-  min-height: 120px;
-  padding: 20px 18px;
-  background: rgba(25, 39, 70, 0.96);
-  border: 1px solid #60739c;
-  border-radius: 10px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-}
-
-.card-index {
-  position: absolute;
-  right: 14px;
-  top: 12px;
-  color: #6683c4;
-  font-size: 11px;
-}
-
-.info-card h2 {
-  font-size: 16px;
-  line-height: 1.35;
-  margin: 0 0 10px;
-}
-
-.info-card p {
-  margin: 0;
-  color: #c7d3e5;
-  font-size: 13px;
-  line-height: 1.45;
-}
-
-.formula-card {
-  position: absolute;
-  z-index: 3;
-  right: 26px;
-  bottom: 24px;
-  width: 245px;
-  padding: 18px;
-  background: rgba(25, 39, 70, 0.96);
-  border: 1px solid #60739c;
-  border-radius: 8px;
-  text-align: right;
-}
-
-.formula-card span {
-  display: block;
-  color: #efb152;
-  font-size: 13px;
-  margin-bottom: 8px;
-}
-
-.formula-card b {
-  display: block;
-  color: #efb152;
-  font-size: 16px;
-}
-
-.formula-card small {
-  display: block;
-  color: #54d28a;
-  font-size: 12px;
-  margin-top: 10px;
-}
-
-.transport {
-  position: absolute;
-  left: 26px;
-  bottom: 20px;
-  display: flex;
-  gap: 8px;
-  z-index: 4;
-}
-
-.play-button,
-.reset-button {
-  width: 44px;
-  height: 44px;
-  border: 1px solid #6a7e9a;
-  border-radius: 50%;
-  color: #edf4ff;
-  background: #1a2941;
-  font-size: 18px;
-}
-
-.play-button {
-  width: 54px;
-  height: 54px;
-  border: 0;
-  background: #466bff;
-  font-size: 20px;
-}
-
-.control-bar {
-  background: #111a2b;
-  padding: 20px 26px;
-}
-
-.eccentricity-control {
-  height: 100%;
-  background: rgba(25, 39, 70, 0.92);
-  border: 1px solid #60739c;
-  border-radius: 9px;
-  padding: 13px 18px;
-}
-
-.control-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.control-title strong {
-  font-size: 14px;
-}
-
-.control-title output {
-  background: #163f5a;
-  color: #56de8b;
-  border-radius: 4px;
-  padding: 5px 9px;
+  font-size: 15px;
   font-weight: 700;
-  font-family: monospace;
 }
 
-.eccentricity-control input {
-  width: 100%;
-  height: 8px;
-  accent-color: #54b7a1;
+.derivation-formula {
+  fill: #edf4ff;
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.planet-controls {
+.derivation-note {
+  fill: #aebed1;
+  font-size: 13px;
+}
+
+.derivation-result {
+  fill: #64d69a;
+}
+
+.third-law-controls {
   height: 100%;
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 10px;
+}
+
+.mode-controls,
+.application-controls {
   display: flex;
   gap: 8px;
 }
 
-.planet-controls button {
+.mode-controls button,
+.application-controls button {
   flex: 1;
   border: 1px solid #60739c;
   border-radius: 8px;
@@ -953,133 +599,143 @@ footer span {
   color: #b7c5d7;
 }
 
-.planet-controls button.active {
+.mode-controls button.active,
+.application-controls button.active {
   background: #466bff;
   border-color: #6b8cff;
   color: #fff;
 }
 
-.focus-dot {
-  fill: #b9cef0;
+.compact-planets {
+  height: 100%;
 }
 
-.chart-grid {
-  stroke: #8396af;
-  stroke-width: 0.7;
-  opacity: 0.14;
-}
-
-.chart-axis {
-  stroke: #9aabc0;
-  stroke-width: 1.2;
-}
-
-.curve-line {
-  fill: none;
-  stroke: #efb152;
-  stroke-width: 3;
-}
-
-.chart-point circle {
-  fill: #91a3ba;
-}
-
-.chart-point text {
-  fill: #91a3ba;
-  font-size: 13px;
+.formula-heading {
+  fill: #edf4ff;
+  font-size: 22px;
   font-weight: 700;
-  paint-order: stroke;
-  stroke: #09101d;
-  stroke-width: 5px;
-  stroke-linejoin: round;
 }
 
-.chart-point.active circle {
+.formula-box {
+  fill: rgba(25, 39, 70, 0.95);
+  stroke: #60739c;
+  stroke-width: 2;
+}
+
+.formula-box.numerator {
+  stroke: #efb152;
+}
+
+.formula-box.denominator {
+  stroke: #64d69a;
+}
+
+.formula-box.result {
+  stroke: #466bff;
+}
+
+.formula-symbol {
+  fill: #edf4ff;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.formula-subtitle {
+  fill: #aebed1;
+  font-size: 15px;
+}
+
+.formula-value {
   fill: #efb152;
-  stroke: #ffe4a5;
-  stroke-width: 5;
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.chart-point.active text {
-  fill: #efb152;
+.division-symbol {
+  fill: #64d69a;
+  font-size: 34px;
 }
 
-.ellipse-formulas {
-  text-align: left;
-}
-
-.ellipse-formulas b {
-  font-size: 13px;
-  margin: 5px 0;
-}
-
-.ellipse-formulas small {
-  line-height: 1.7;
-}
-
-.ellipse-main {
+.division-arrow {
+  stroke: #64d69a;
   stroke-width: 3;
 }
 
-.focus-distance {
+.division-arrow-head {
+  fill: #64d69a;
+}
+
+.formula-result {
+  fill: #edf4ff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.formula-result-label {
+  fill: #56de8b;
+  font-size: 14px;
+}
+
+.application-orbit {
+  fill: none;
+  stroke: #78aaf3;
+  stroke-width: 3;
+}
+
+.application-center {
+  fill: #ffc55a;
+}
+
+.application-object {
+  fill: #64d69a;
+  stroke: #b7f1cb;
+  stroke-width: 2;
+}
+
+.application-radius {
+  stroke: #efb152;
   stroke-width: 2;
   stroke-dasharray: 8 7;
 }
 
-.focus-one {
-  stroke: #efb152;
+.application-center-label,
+.application-object-label,
+.application-axis {
+  fill: #cbd7e8;
+  font-size: 14px;
 }
 
-.focus-two {
-  stroke: #64d69a;
-}
-
-.focus-dot-one {
+.application-axis {
   fill: #efb152;
-  stroke: #ffe3a0;
-  stroke-width: 3;
+  font-size: 18px;
 }
 
-.focus-dot-two {
-  fill: #64d69a;
-  stroke: #b7f1cb;
-  stroke-width: 3;
-}
-
-.point-on-ellipse {
-  fill: #edf4ff;
-  stroke: #64d69a;
-  stroke-width: 3;
-}
-
-.dimension-brackets line {
-  stroke: #7f91a8;
-  stroke-width: 1;
-}
-
-.perihel-label {
-  fill: #efb152;
-}
-
-.aphel-label {
-  fill: #64d69a;
-}
-
-.major-axis-marker {
-  stroke: #efb152;
+.application-title-box {
+  fill: rgba(25, 39, 70, 0.94);
+  stroke: #60739c;
   stroke-width: 2;
 }
 
-.orbit-formula-scene .formula-a-label {
-  paint-order: stroke;
-  stroke: #09101d;
-  stroke-width: 5px;
+.application-title {
+  fill: #edf4ff;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.orbit-formula-scene .formula-t-label {
-  paint-order: stroke;
-  stroke: #09101d;
-  stroke-width: 5px;
+.application-subtitle {
+  fill: #efb152;
+  font-size: 14px;
+}
+
+.application-equation {
+  fill: #64d69a;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.application-text {
+  fill: #aebed1;
+  font-size: 12px;
 }
 
 @media (max-width: 900px) {
@@ -1355,7 +1011,7 @@ footer span {
 .third-law-controls {
   height: 100%;
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 330px 1fr;
   gap: 10px;
 }
 
@@ -1515,9 +1171,9 @@ footer span {
 
 @media (max-width: 900px) {
   .third-law-controls {
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 280px 1fr;
   }
-  .application-controls button {
+  .mode-controls button {
     font-size: 11px;
   }
 }
