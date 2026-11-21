@@ -495,7 +495,12 @@
 
 .point text {
   fill: #91a3ba;
-  font-size: 11px;
+  font-size: 13px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: #09101d;
+  stroke-width: 5px;
+  stroke-linejoin: round;
 }
 
 .point.active circle {
@@ -981,7 +986,12 @@ footer span {
 
 .chart-point text {
   fill: #91a3ba;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: #09101d;
+  stroke-width: 5px;
+  stroke-linejoin: round;
 }
 
 .chart-point.active circle {

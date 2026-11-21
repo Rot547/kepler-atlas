@@ -73,12 +73,17 @@ function ThirdLawScene({ planetIndex }) {
       <line x1={left} x2={right} y1={bottom} y2={bottom} className="chart-axis" />
       <line x1={left} x2={left} y1={top} y2={bottom} className="chart-axis" />
       <path d={curve} className="curve-line" />
-      {planets.map(([name,r,t],i) => (
-        <g key={name} className={planetIndex === i ? 'chart-point active' : 'chart-point'}>
-          <circle cx={x(r)} cy={y(t)} r={planetIndex === i ? 11 : 7} />
-          <text x={x(r)+14} y={y(t)-12}>{name}</text>
-        </g>
-      ))}
+      {planets.map(([name,r,t],i) => {
+        const pointX = x(r)
+        const pointY = y(t)
+        const labelAbove = i < 3
+        return (
+          <g key={name} className={planetIndex === i ? 'chart-point active' : 'chart-point'}>
+            <circle cx={pointX} cy={pointY} r={planetIndex === i ? 11 : 7} />
+            <text x={pointX} y={labelAbove ? pointY-18 : pointY-14} textAnchor="middle">{name}</text>
+          </g>
+        )
+      })}
       <text x="430" y="688" className="axis-label">Große Halbachse a / AE</text>
       <text x="28" y="380" transform="rotate(-90 28 380)" className="axis-label">Umlaufzeit T / Jahre</text>
     </svg>
